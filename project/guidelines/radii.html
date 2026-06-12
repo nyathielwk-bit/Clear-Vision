@@ -1,0 +1,24 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Corner Radii" subtitle="Restrained, editorial corners" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-card); padding: 24px 32px; display:flex; gap: 22px; align-items:flex-end; }
+  .item { display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .box { width: 72px; height: 56px; background: var(--stone-100); border: 1.5px solid var(--sienna-400); }
+  .tk { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); }
+  .px { font-family: var(--font-mono); font-size: 10px; color: var(--text-subtle); }
+  .lab { display:flex; flex-direction:column; align-items:center; }
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="border-radius:var(--radius-xs)"></div><div class="lab"><span class="tk">xs</span><span class="px">2</span></div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><div class="lab"><span class="tk">sm</span><span class="px">4</span></div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><div class="lab"><span class="tk">md</span><span class="px">8</span></div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><div class="lab"><span class="tk">lg</span><span class="px">14</span></div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><div class="lab"><span class="tk">xl</span><span class="px">22</span></div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-pill); width:92px"></div><div class="lab"><span class="tk">pill</span><span class="px">999</span></div></div>
+</body>
+</html>

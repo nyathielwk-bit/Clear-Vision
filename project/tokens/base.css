@@ -1,0 +1,68 @@
+/* ============================================================
+   Aurelia — Base element defaults
+   Lightweight reset + brand-aware element styling.
+   Imported last so tokens are available.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font: var(--type-body);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--text-heading);
+  font-weight: var(--weight-regular);
+  text-wrap: pretty;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--gold-300);
+  transition: color var(--duration-fast) var(--ease-standard), text-decoration-color var(--duration-fast) var(--ease-standard);
+}
+a:hover { color: var(--primary-hover); text-decoration: underline; text-decoration-color: var(--primary-hover); }
+
+img, svg, video { display: block; max-width: 100%; }
+
+strong, b { font-weight: var(--weight-semibold); }
+
+small { font-size: var(--text-sm); }
+
+hr {
+  border: none;
+  border-top: var(--border-rule) solid var(--border-default);
+  margin: var(--space-6) 0;
+}
+
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.9em; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Utility: brand eyebrow / overline label */
+.aurelia-eyebrow {
+  font: var(--type-eyebrow);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}

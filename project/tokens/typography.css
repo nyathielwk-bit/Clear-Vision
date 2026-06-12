@@ -1,0 +1,74 @@
+/* ============================================================
+   Aurelia — Typography tokens
+   Display serif: Playfair Display. Text sans: Inter.
+   ============================================================ */
+
+:root {
+  /* ---------- Families ---------- */
+  --font-display: "Playfair Display", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-sans:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono:    ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* ---------- Weights ---------- */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* ---------- Type scale (1.250 major-third, 16px base) ---------- */
+  --text-2xs:  0.6875rem; /* 11px — micro labels */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px — body */
+  --text-md:   1.125rem;  /* 18px — lead body */
+  --text-lg:   1.375rem;  /* 22px */
+  --text-xl:   1.75rem;   /* 28px */
+  --text-2xl:  2.25rem;   /* 36px */
+  --text-3xl:  3rem;      /* 48px */
+  --text-4xl:  4rem;      /* 64px */
+  --text-5xl:  5.25rem;   /* 84px — hero display */
+
+  /* ---------- Line heights ---------- */
+  --leading-none:    1;
+  --leading-tight:   1.12; /* display headings */
+  --leading-snug:    1.28;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65; /* long-form reading */
+
+  /* ---------- Letter spacing ---------- */
+  --tracking-tighter: -0.03em; /* large Playfair display */
+  --tracking-tight:   -0.015em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.12em;  /* eyebrows / overlines */
+  --tracking-widest:  0.22em;  /* spaced caps labels */
+
+  /* ============================================================
+     Semantic role shorthands (font / size / leading / spacing)
+     ============================================================ */
+
+  /* Display — Playfair */
+  --type-display:   var(--weight-regular) var(--text-5xl)/var(--leading-tight) var(--font-display);
+  --type-h1:        var(--weight-regular) var(--text-4xl)/var(--leading-tight) var(--font-display);
+  --type-h2:        var(--weight-regular) var(--text-3xl)/1.15 var(--font-display);
+  --type-h3:        var(--weight-medium)  var(--text-xl)/1.2 var(--font-display);
+
+  /* Headings / UI — Inter */
+  --type-title:     var(--weight-semibold) var(--text-lg)/var(--leading-snug) var(--font-sans);
+  --type-subtitle:  var(--weight-medium)   var(--text-md)/var(--leading-snug) var(--font-sans);
+
+  /* Body — Inter */
+  --type-body:      var(--weight-regular) var(--text-base)/var(--leading-relaxed) var(--font-sans);
+  --type-body-sm:   var(--weight-regular) var(--text-sm)/var(--leading-normal) var(--font-sans);
+  --type-lead:      var(--weight-regular) var(--text-md)/var(--leading-relaxed) var(--font-sans);
+
+  /* Long-form article body — Playfair-paired Inter */
+  --type-prose:     var(--weight-regular) var(--text-md)/1.7 var(--font-sans);
+
+  /* Labels / meta — Inter */
+  --type-label:     var(--weight-medium) var(--text-sm)/1.2 var(--font-sans);
+  --type-caption:   var(--weight-regular) var(--text-xs)/1.4 var(--font-sans);
+  --type-eyebrow:   var(--weight-semibold) var(--text-xs)/1 var(--font-sans);
+}

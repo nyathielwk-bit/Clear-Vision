@@ -1,0 +1,80 @@
+<!-- @dsCard group="Clearframe Website" viewport="1360x820" name="Clearframe Studio — Contact" subtitle="Contact details + quote request form (interactive)" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clearframe Studio — Fast, professional websites for Toronto businesses</title>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="app.css">
+<style>
+  html, body { margin: 0; background: var(--background); }
+  #root { min-height: 100vh; }
+  .cf-boot { display: grid; place-items: center; min-height: 100vh; font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--navy-800); letter-spacing: 0.01em; }
+</style>
+</head>
+<body>
+  <div id="root"><div class="cf-boot">Clearframe</div></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script>window.__CF_ROUTE__ = "contact";</script>
+  <script src="../../_ds_bundle.js"></script>
+
+  <script>
+  (async function () {
+    const NS_KEY = "AureliaDesignSystem_df5d1c";
+
+    async function buildDS() {
+      const files = [
+        "../../components/actions/Button.jsx",
+        "../../components/actions/IconButton.jsx",
+        "../../components/forms/Input.jsx",
+        "../../components/forms/Checkbox.jsx",
+        "../../components/forms/Switch.jsx",
+        "../../components/display/Card.jsx",
+        "../../components/display/Badge.jsx",
+        "../../components/display/Tag.jsx",
+        "../../components/display/Avatar.jsx",
+        "../../components/editorial/Pullquote.jsx",
+        "../../components/editorial/Rule.jsx",
+      ];
+      const NS = {};
+      for (const f of files) {
+        let src = await (await fetch(f)).text();
+        src = src.replace(/^\s*import\s+.*$/gm, "");
+        src = src.replace(/export\s+function\s+/g, "function ");
+        const names = [...src.matchAll(/^function\s+([A-Z][A-Za-z0-9]+)/gm)].map((m) => m[1]);
+        src += "\n" + names.map((n) => `NS.${n}=${n};`).join("\n");
+        new Function("React", "NS", Babel.transform(src, { presets: ["react"] }).code)(window.React, NS);
+      }
+      return NS;
+    }
+
+    // Use the compiled bundle only if it's fresh (newer builds include the
+    // gold `accent` button); otherwise rebuild from source so the kit is
+    // always correct, even behind a stale cached bundle.
+    let DS = window[NS_KEY];
+    const fresh = DS && DS.Button && DS.Button.toString().includes("au-btn--accent");
+    if (!fresh) DS = await buildDS();
+    window[NS_KEY] = DS;
+
+    const APP = {};
+    const kit = ["parts/Data.jsx", "parts/Icons.jsx", "parts/Chrome.jsx", "screens/Home.jsx", "screens/Services.jsx", "screens/Contact.jsx", "App.jsx"];
+    for (const f of kit) {
+      const src = await (await fetch(f)).text();
+      new Function("React", "DS", "APP", Babel.transform(src, { presets: ["react"] }).code)(window.React, DS, APP);
+    }
+
+    if (document.fonts && document.fonts.ready) { try { await document.fonts.ready; } catch (e) {} }
+    ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(APP.App));
+  })().catch((e) => {
+    document.getElementById("root").innerHTML =
+      '<pre style="padding:24px;color:#B4493C;font-family:monospace;white-space:pre-wrap">' +
+      (e && e.stack ? e.stack : e) + "</pre>";
+    console.error(e);
+  });
+  </script>
+</body>
+</html>

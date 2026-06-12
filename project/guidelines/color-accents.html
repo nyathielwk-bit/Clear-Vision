@@ -1,0 +1,39 @@
+<!-- @dsCard group="Colors" viewport="700x172" name="Accents — Sage & Gold" subtitle="Sage for calm trust; gold for the key CTA & highlights" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface); padding: 22px 24px; display:flex; gap: 28px; }
+  .group { flex: 1; }
+  .glabel { font: var(--type-eyebrow); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .ramp { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+  .sw { display: flex; flex-direction: column; gap: 6px; }
+  .chip { height: 58px; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  .name { font: var(--type-caption); color: var(--text-muted); }
+  .hex { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+  .meta { display: flex; flex-direction: column; gap: 1px; }
+</style>
+</head>
+<body>
+  <div class="group">
+    <div class="glabel">Muted Sage · accent 1</div>
+    <div class="ramp">
+      <div class="sw"><div class="chip" style="background:var(--sage-100)"></div><div class="meta"><span class="name">100</span><span class="hex">#DBE2D6</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--sage-300)"></div><div class="meta"><span class="name">300</span><span class="hex">#A9B9A2</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--sage-500)"></div><div class="meta"><span class="name">500</span><span class="hex">#7D9277</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--sage-700)"></div><div class="meta"><span class="name">700</span><span class="hex">#4E6149</span></div></div>
+    </div>
+  </div>
+  <div class="group">
+    <div class="glabel">Warm Gold · accent 2</div>
+    <div class="ramp">
+      <div class="sw"><div class="chip" style="background:var(--gold-100)"></div><div class="meta"><span class="name">100</span><span class="hex">#F4E2C5</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--gold-300)"></div><div class="meta"><span class="name">300</span><span class="hex">#E0B97E</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--gold-500)"></div><div class="meta"><span class="name">500</span><span class="hex">#C88B3A</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--gold-700)"></div><div class="meta"><span class="name">700</span><span class="hex">#855820</span></div></div>
+    </div>
+  </div>
+</body>
+</html>

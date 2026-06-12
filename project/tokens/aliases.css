@@ -1,0 +1,62 @@
+/* ============================================================
+   Clearframe Studio — compatibility aliases
+   Maps the design-system's internal component token names onto
+   the Clearframe semantic palette so every primitive re-skins
+   automatically. Imported right after colors.css.
+   Product code should prefer the canonical names in colors.css.
+   ============================================================ */
+
+:root {
+  /* Surfaces */
+  --surface-page:    var(--background);
+  --surface-card:    var(--surface);
+  --surface-raised:  var(--surface-alt);
+  --surface-sunken:  var(--surface-alt);
+
+  /* Text */
+  --text-heading:    var(--text-primary);
+  --text-body:       var(--navy-800);
+  --text-subtle:     var(--text-muted);
+  --text-accent:     var(--gold-700);
+  --accent-contrast: #FFFFFF;
+
+  /* Borders */
+  --border-subtle:   var(--border);
+  --border-default:  var(--border);
+  --border-rule:     1.5px; /* @kind spacing */
+
+  /* Legacy "sienna" warm-accent ramp  ->  navy (clean branded chips) */
+  --sienna-50:  var(--navy-50);
+  --sienna-100: var(--navy-100);
+  --sienna-200: var(--navy-200);
+  --sienna-300: var(--navy-300);
+  --sienna-400: var(--navy-400);
+  --sienna-500: var(--navy-600);
+  --sienna-600: var(--navy-700);
+  --sienna-700: var(--navy-800);
+  --sienna-800: var(--navy-900);
+
+  /* Legacy "brass" ramp  ->  gold */
+  --brass-100: var(--gold-100);
+  --brass-200: var(--gold-100);
+  --brass-300: var(--gold-300);
+  --brass-400: var(--gold-300);
+  --brass-500: var(--gold-500);
+  --brass-600: var(--gold-600);
+
+  /* Legacy status names */
+  --success-fg: var(--success);
+  --success-bg: var(--success-100);
+  --warning-fg: var(--warning);
+  --warning-bg: var(--warning-100);
+  --danger-fg:  var(--error);
+  --danger-bg:  var(--error-100);
+  --info-fg:    var(--navy-600);
+  --info-bg:    var(--navy-50);
+  --brick-500:  var(--error-500);
+  --brick-700:  var(--error-500);
+  --sage-100:   var(--sage-50);
+
+  /* Focus ring shadow consumed by components */
+  --ring: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 34%, transparent);
+}

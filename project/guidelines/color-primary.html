@@ -1,0 +1,32 @@
+<!-- @dsCard group="Colors" viewport="700x186" name="Primary — Deep Navy" subtitle="The core brand color; CTAs, headers, footer" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface); padding: 22px 24px; }
+  .ramp { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; }
+  .sw { display: flex; flex-direction: column; gap: 7px; }
+  .chip { height: 64px; border-radius: var(--radius-sm); border: 1px solid var(--border); position: relative; }
+  .star { position: absolute; top: 6px; right: 7px; color: #fff; font-size: 12px; }
+  .name { font: var(--type-caption); color: var(--text-muted); }
+  .hex { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+  .meta { display: flex; flex-direction: column; gap: 1px; }
+</style>
+</head>
+<body>
+  <div class="ramp">
+    <div class="sw"><div class="chip" style="background:var(--navy-50)"></div><div class="meta"><span class="name">50</span><span class="hex">#EEF1F5</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-100)"></div><div class="meta"><span class="name">100</span><span class="hex">#D9DEE6</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-200)"></div><div class="meta"><span class="name">200</span><span class="hex">#B4BECB</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-300)"></div><div class="meta"><span class="name">300</span><span class="hex">#8593A6</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-400)"></div><div class="meta"><span class="name">400</span><span class="hex">#5B6B84</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-500)"></div><div class="meta"><span class="name">500</span><span class="hex">#3B5077</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-600)"></div><div class="meta"><span class="name">600</span><span class="hex">#2B3F62</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-700)"></div><div class="meta"><span class="name">700</span><span class="hex">#20304D</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-800)"><span class="star">&#9733;</span></div><div class="meta"><span class="name">800</span><span class="hex">#162238</span></div></div>
+    <div class="sw"><div class="chip" style="background:var(--navy-900)"></div><div class="meta"><span class="name">900</span><span class="hex">#111B2E</span></div></div>
+  </div>
+</body>
+</html>

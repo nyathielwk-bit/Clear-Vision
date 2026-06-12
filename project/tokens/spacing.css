@@ -1,0 +1,31 @@
+/* ============================================================
+   Aurelia — Spacing, sizing & layout tokens
+   8px base rhythm with a few finer half-steps.
+   ============================================================ */
+
+:root {
+  /* ---------- Spacing scale ---------- */
+  --space-0:   0;
+  --space-1:   0.25rem;  /* 4 */
+  --space-2:   0.5rem;   /* 8 */
+  --space-3:   0.75rem;  /* 12 */
+  --space-4:   1rem;     /* 16 */
+  --space-5:   1.5rem;   /* 24 */
+  --space-6:   2rem;     /* 32 */
+  --space-7:   2.5rem;   /* 40 */
+  --space-8:   3rem;     /* 48 */
+  --space-9:   4rem;     /* 64 */
+  --space-10:  5rem;     /* 80 */
+  --space-11:  6.5rem;   /* 104 */
+  --space-12:  8rem;     /* 128 */
+
+  /* ---------- Layout ---------- */
+  --container-sm:   42rem;  /* 672 — reading measure */
+  --container-md:   60rem;  /* 960 */
+  --container-lg:   75rem;  /* 1200 */
+  --container-xl:   85rem;  /* 1360 */
+  --gutter:         var(--space-5);
+  --gutter-lg:      var(--space-8);
+  --section-y:      var(--space-11);
+  --measure:        68ch;   /* optimal prose line length */
+}

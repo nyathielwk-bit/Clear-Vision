@@ -1,0 +1,22 @@
+<!-- @dsCard group="Type" viewport="700x260" name="Text — Inter" subtitle="Lead, body, small & caption in Inter" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-card); padding: 26px 32px; }
+  .row { padding: 8px 0; border-bottom: 1px solid var(--border-subtle); display:flex; align-items:baseline; gap:16px; }
+  .row:last-child { border-bottom: none; }
+  .s { color: var(--text-body); font-family: var(--font-sans); }
+  .tag { margin-left: auto; font-family: var(--font-mono); font-size: 11px; color: var(--text-subtle); white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="s" style="font-size:18px; font-weight:400">Lead paragraph — a touch larger for intros</span><span class="tag">18 / 400 · --type-lead</span></div>
+  <div class="row"><span class="s" style="font-size:16px; font-weight:400">Body text is set in Inter at sixteen pixels</span><span class="tag">16 / 400 · --type-body</span></div>
+  <div class="row"><span class="s" style="font-size:16px; font-weight:600">Body semibold for emphasis within copy</span><span class="tag">16 / 600</span></div>
+  <div class="row"><span class="s" style="font-size:14px; font-weight:400; color:var(--text-muted)">Small text for secondary detail and meta</span><span class="tag">14 / 400 · --type-body-sm</span></div>
+  <div class="row"><span class="s" style="font-size:12px; font-weight:400; color:var(--text-subtle)">Caption — finest readable size</span><span class="tag">12 / 400 · --type-caption</span></div>
+</body>
+</html>

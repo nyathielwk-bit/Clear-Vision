@@ -1,0 +1,31 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Spacing Scale" subtitle="8px base rhythm, 4 → 128px" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-card); padding: 24px 32px; }
+  .row { display:flex; align-items:flex-end; gap: 14px; height: 96px; }
+  .bar { display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .fill { width: 100%; background: var(--sienna-200); border-radius: var(--radius-xs); }
+  .swatch { display:flex; flex-direction:column; align-items:center; }
+  .tk { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+  .px { font-family: var(--font-mono); font-size: 10px; color: var(--text-subtle); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="bar" style="width:28px"><div class="fill" style="height:4px"></div><div class="swatch"><span class="tk">1</span><span class="px">4</span></div></div>
+    <div class="bar" style="width:28px"><div class="fill" style="height:8px"></div><div class="swatch"><span class="tk">2</span><span class="px">8</span></div></div>
+    <div class="bar" style="width:28px"><div class="fill" style="height:12px"></div><div class="swatch"><span class="tk">3</span><span class="px">12</span></div></div>
+    <div class="bar" style="width:28px"><div class="fill" style="height:16px"></div><div class="swatch"><span class="tk">4</span><span class="px">16</span></div></div>
+    <div class="bar" style="width:32px"><div class="fill" style="height:24px"></div><div class="swatch"><span class="tk">5</span><span class="px">24</span></div></div>
+    <div class="bar" style="width:36px"><div class="fill" style="height:32px"></div><div class="swatch"><span class="tk">6</span><span class="px">32</span></div></div>
+    <div class="bar" style="width:40px"><div class="fill" style="height:40px"></div><div class="swatch"><span class="tk">7</span><span class="px">40</span></div></div>
+    <div class="bar" style="width:46px"><div class="fill" style="height:48px"></div><div class="swatch"><span class="tk">8</span><span class="px">48</span></div></div>
+    <div class="bar" style="width:54px"><div class="fill" style="height:64px"></div><div class="swatch"><span class="tk">9</span><span class="px">64</span></div></div>
+    <div class="bar" style="width:62px"><div class="fill" style="height:80px"></div><div class="swatch"><span class="tk">10</span><span class="px">80</span></div></div>
+  </div>
+</body>
+</html>

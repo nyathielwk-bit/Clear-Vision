@@ -1,0 +1,110 @@
+/* ============================================================
+   Clearframe Studio — Color tokens
+   Premium local-service palette: deep navy, slate blue-gray,
+   warm off-white, muted sage, warm gold.
+   Base ramps first, then the semantic aliases used in product code.
+   ============================================================ */
+
+:root {
+  /* ---------- Navy (primary brand) ---------- */
+  --navy-950: #0B1322;
+  --navy-900: #111B2E;
+  --navy-800: #162238; /* PRIMARY */
+  --navy-700: #20304D;
+  --navy-600: #2B3F62;
+  --navy-500: #3B5077;
+  --navy-400: #5B6B84; /* SECONDARY — slate blue-gray */
+  --navy-300: #8593A6;
+  --navy-200: #B4BECB;
+  --navy-100: #D9DEE6;
+  --navy-50:  #EEF1F5;
+
+  /* ---------- Warm neutrals (paper / stone) ---------- */
+  --stone-0:   #FFFFFF;
+  --stone-50:  #FAF8F4;
+  --stone-100: #F7F5F1; /* BACKGROUND */
+  --stone-150: #F1EEE7;
+  --stone-200: #E8E3DA; /* surface-alt edge / hairlines */
+  --stone-300: #D8D2C6;
+  --stone-400: #B7AF9F;
+  --stone-500: #8C8576;
+  --stone-600: #6B6557;
+  --stone-700: #4D483D;
+
+  /* ---------- Sage (accent 1 — calm, trust) ---------- */
+  --sage-50:  #EEF1ED;
+  --sage-100: #DBE2D6;
+  --sage-300: #A9B9A2;
+  --sage-500: #7D9277; /* muted sage */
+  --sage-600: #647A5F;
+  --sage-700: #4E6149;
+
+  /* ---------- Gold (accent 2 — warmth, highlight, key CTA) ---------- */
+  --gold-50:  #FBF3E6;
+  --gold-100: #F4E2C5;
+  --gold-300: #E0B97E;
+  --gold-500: #C88B3A; /* warm gold */
+  --gold-600: #A9722A;
+  --gold-700: #855820;
+
+  /* ---------- Status hues (restrained) ---------- */
+  --success-500: #4E7A57;
+  --success-100: #E2EDE4;
+  --warning-500: #C88B3A;
+  --warning-100: #F6EBD6;
+  --error-500:   #B4493C;
+  --error-100:   #F6E2DE;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in product code
+     ============================================================ */
+
+  /* Brand */
+  --primary:        var(--navy-800);
+  --primary-hover:  var(--navy-700);
+  --primary-press:  var(--navy-900);
+  --secondary:      var(--navy-400);
+
+  /* Surfaces */
+  --background:     var(--stone-100); /* warm off-white page */
+  --surface:        #FFFFFF;          /* cards, nav, inputs */
+  --surface-alt:    var(--stone-150); /* alternating sections, wells */
+  --surface-inverse:var(--navy-800);  /* dark sections, footer */
+
+  /* Text */
+  --text-primary:   var(--navy-800);
+  --text-secondary: var(--navy-400);
+  --text-muted:     var(--stone-500);
+  --text-inverse:   var(--stone-50);
+  --text-onaccent:  #FFFFFF;
+  --text-onaccent-gold: var(--navy-900);
+
+  /* Borders */
+  --border:         var(--stone-200);
+  --border-strong:  var(--stone-300);
+  --border-inverse: rgba(255,255,255,0.14);
+
+  /* Accents */
+  --accent:         var(--gold-500);   /* warm gold — highlights & the key CTA */
+  --accent-hover:   var(--gold-600);
+  --accent-soft:    var(--gold-50);
+  --sage:           var(--sage-500);
+  --sage-soft:      var(--sage-50);
+
+  /* Status */
+  --success:        var(--success-500);
+  --success-bg:     var(--success-100);
+  --warning:        var(--warning-500);
+  --warning-bg:     var(--warning-100);
+  --error:          var(--error-500);
+  --error-bg:       var(--error-100);
+
+  /* Focus ring */
+  --focus-ring:     var(--navy-500);
+
+  /* Selection */
+  --selection-bg:   var(--gold-100);
+  --selection-fg:   var(--navy-900);
+}
+
+::selection { background: var(--selection-bg); color: var(--selection-fg); }
